@@ -1,8 +1,11 @@
 import {giocatore} from './player.js';
+import {reset} from './reset.js'
 
 let bomba1 = Math.floor(Math.random()*16);
 let bomba2 = Math.floor(Math.random()*16);
-console.log(bomba1); console.log(bomba2);
+if(bomba2 == bomba1){location.reload()};
+
+// console.log(bomba1); console.log(bomba2);
 let danno=0;
 let click=0;
 
@@ -28,18 +31,9 @@ function controllo(i){
     }
     if(danno==2){
         alert('HAI PERSO!');
-        reset();
+        reset(danno, click);
     }else if(danno<2 && click==14){
         alert('HAI VINTO!');
-        reset();
+        reset(danno, click);
     }
-}
-
-function reset() {
-    for (let i=0; i<16; i++) {
-        let cas = "casella"+i;
-        document.getElementById(cas).innerHTML = "";
-    }
-    danno = 0;
-    click = 0;
 }
