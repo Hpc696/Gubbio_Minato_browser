@@ -24,15 +24,17 @@ tr{
     padding: 0.5rem;
     border-spacing: 0.5rem;
 }
-#casella1, #casella2, #casella3, #casella4, #casella5, #casella6, #casella7, #casella8, #casella9 {
-    opacity: 0.33;
-}
+
 h2{
     color: rgb(62, 0, 249);
     vertical-align: middle;
     top: 50vh;
 }
-.myimg{
-    width: 10% ;
-    height: 10%;
+img{
+    width: 70%;
+    height: 60%;
+}
+
+p{
+    display: inline;
 }
